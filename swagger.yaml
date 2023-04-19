@@ -104,7 +104,7 @@ paths:
       deprecated: false
       security:
         - bearer: []
-  /job/{id}:
+  /jobs/{id}:
     parameters:
       - in: path
         name: id
