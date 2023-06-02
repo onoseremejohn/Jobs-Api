@@ -22,13 +22,13 @@ paths:
               allOf:
                 - $ref: "#/components/schemas/RegisterUserRequest"
                 - example:
-                    name: "Your name"
-                    email: example@gmail.com
-                    password: secretpassword
+                    name: ""
+                    email: kjjkj@gmail.com
+                    password: jj
             example:
-              name: "Your name"
-              email: example@gmail.com
-              password: secretpassword
+              name: ""
+              email: kjjkj@gmail.com
+              password: jj
         required: true
       responses:
         "200":
@@ -54,8 +54,8 @@ paths:
                     email: tolu@gmail.com
                     password: toluwase
             example:
-              email: example@gmail.com
-              password: secretpassword
+              email: tolu@gmail.com
+              password: toluwase
         required: true
       responses:
         "200":
@@ -91,11 +91,11 @@ paths:
               allOf:
                 - $ref: "#/components/schemas/CreateJobRequest"
                 - example:
-                    company: Google
-                    position: SDE Intern
+                    company: oraimo
+                    position: chord
             example:
-              company: Amazon
-              position: Cloud Developer
+              company: oraimo
+              position: chord
         required: true
       responses:
         "200":
@@ -139,12 +139,11 @@ paths:
               allOf:
                 - $ref: "#/components/schemas/UpdateJobRequest"
                 - example:
-                    company: Microsoft
+                    company: pp
                     position: full stack developer
             example:
-              company: Google
-              position: Software Engineer
-              status: interview
+              company: pp
+              position: full stack developer
         required: true
       responses:
         "200":
@@ -183,9 +182,9 @@ components:
         password:
           type: string
       example:
-        name: "John"
-        email: example@gmail.com
-        password: secretpassword
+        name: ""
+        email: kjjkj@gmail.com
+        password: jj
     LoginUserRequest:
       title: LoginUserRequest
       required:
@@ -198,25 +197,22 @@ components:
         password:
           type: string
       example:
-        email: example@gmail.com
-        password: secretpassword
+        email: tolu@gmail.com
+        password: toluwase
     CreateJobRequest:
       title: CreateJobRequest
       required:
         - company
         - position
-        - status
       type: object
       properties:
         company:
           type: string
         position:
           type: string
-        status:
-          type: string
       example:
-        company: Google
-        position: Software Engineer
+        company: oraimo
+        position: chord
     UpdateJobRequest:
       title: UpdateJobRequest
       required:
@@ -229,7 +225,7 @@ components:
         position:
           type: string
       example:
-        company: Microsoft
+        company: pp
         position: full stack developer
   securitySchemes:
     bearer:
